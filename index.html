@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="topSpots">
+
+<head>
+    <title>San Diego Top Spots</title>
+</head>
+
+<body ng-controller="HomeController as homeCtrl">
+    <h1> Places to Visit in San Diego </h1>
+
+    <table class='table'>
+        <tr>
+            <th>The Place</th>
+            <th>Deets!</th>
+            <th>Precise Locations</th>
+        </tr>
+        <tr ng-repeat="place in homeCtrl.places">
+            <td>{{place.name}}</td>
+            <td>{{place.description}}</td>
+            <td><a class="btn btn-info" ng-href="https://www.google.com/maps?q= {{place.location[0]}},{{place.location[1]}}">Link</a></td>
+
+        </tr>
+    </table>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="topSpotsAngular.js"></script>
+
+
+</body>
+
+</html>
